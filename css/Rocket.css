@@ -2,6 +2,10 @@
 On this page we designed the overall panels for everything...  */
 
 /*This is the left pannel of the   */
+body{
+	font-family: 'helvetica','arial',sans-serif;
+}
+
 .left{
 	background-color:aquamarine; 
 	position: fixed;
@@ -9,6 +13,11 @@ On this page we designed the overall panels for everything...  */
 	height: 100%;
 	top:0;
 	left:0;
+
+}
+.interface{
+	text-align:center;
+	padding: 20px;
 
 }
 /* This is where the right pannel is located. 
@@ -28,16 +37,39 @@ We set its location along with the width and height */
 .rocket{
 	position:absolute;
 	left:50%;
-	bottom:20px;
-	width:20px;
-	height: 100px;
-	background: blue;
+	bottom:-13px;
+	width:143px;
+	height: 272px;
+	margin-left: -71.5px;
+	background: url('../img/rocket-state1.png') no-repeat; 0 0;
+
+
 	/*Here is the transition that will allow our rocket to fly
 	during this transition the rocket's speed has been set here   */
 	transition: bottom 5000ms;
 }
 /*Here you have the rocket's next location 
 (where it goes during the transition) */
+
+
+
+
+/* Rocket BG image */
+body.body-state2 .rocket{
+	background-image: url('../img/rocket-state2.gif');
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/rocket-state3.gif');
+}
+
+body.body-state5 .rocket{
+background-image: url('../img/boom.png');
+width: 209px;
+height: 200px;
+margin-left: -104.5
+}
 
 body.body-state1 .rocket{
 	transition: none;
@@ -76,19 +108,57 @@ body.body-state5 .state5{display: block;}
 
 /* Here we made the ground which is pretty rad  */
 .ground{
-	background-color: green;
+	background: url('../img/ground.png') no-repeat center center; 
+	/*background-color: green ; */
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width:100%;
-	height: 20px;
-
-
+	height: 37px;
 }
-a{
 
+.nervous {
+	position: absolute;
+	bottom: 228px;
+	left:50%;
+	background: url('../img/nervous.png') no-repeat 0 0;
+	width: 223px;
+	height:100px;
+	margin-left: -180px;
+	display:none;
 }
+
+.cant-wait{
+	position: absolute;
+	bottom: 228px;
+	left:50%;
+	background: url('../img/cant-wait.png') no-repeat 0 0;
+	width: 206px;
+	height:65px;
+	display: none;
+}
+
+.cant-wait.show{
+	display: block;
+}
+
+.nervous.show{
+	display: block;
+}
+
+
 
 a.button{
+	display: inline-block;
+	background-color:white;
+	color:black;
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform:uppercase;
+	transition: color 300ms;
+}
 
+a:hover{
+	color: red
 }

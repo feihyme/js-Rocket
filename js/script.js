@@ -1,3 +1,8 @@
+setTimeout(function(){
+	location.href='rocket.html';
+},2000);
+
+
 // This is just some stuff
 var doCoolStuff = function(){
 	var currentClassName=
