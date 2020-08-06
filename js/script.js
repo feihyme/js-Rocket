@@ -1,5 +1,5 @@
 setTimeout(function(){
-	location.href='rocket.html';
+	location.href='Rocket.html';
 },2000);
 
 
