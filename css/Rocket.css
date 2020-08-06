@@ -1,0 +1,94 @@
+/* Here is the page responsible for the design of the website
+On this page we designed the overall panels for everything...  */
+
+/*This is the left pannel of the   */
+.left{
+	background-color:aquamarine; 
+	position: fixed;
+	width:50%;
+	height: 100%;
+	top:0;
+	left:0;
+
+}
+/* This is where the right pannel is located. 
+We selected the colour for this pannel, along with
+the frame of this pannel */
+.right{
+background-color:aliceblue; 
+	position: fixed;
+	width:50%;
+	height: 100%;
+	top:0;
+	right:0;
+}
+
+/*Here is the actual rocket itself. 
+We set its location along with the width and height */
+.rocket{
+	position:absolute;
+	left:50%;
+	bottom:20px;
+	width:20px;
+	height: 100px;
+	background: blue;
+	/*Here is the transition that will allow our rocket to fly
+	during this transition the rocket's speed has been set here   */
+	transition: bottom 5000ms;
+}
+/*Here you have the rocket's next location 
+(where it goes during the transition) */
+
+body.body-state1 .rocket{
+	transition: none;
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+
+	bottom: 1000px;
+}
+
+.state1{
+	display:none;
+}
+
+.state2{
+	display:none;
+}
+
+.state3{
+	display:none;
+}
+
+.state4{
+	display:none;
+}
+
+.state5{
+	display:none;
+}
+
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}
+
+/* Here we made the ground which is pretty rad  */
+.ground{
+	background-color: green;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	height: 20px;
+
+
+}
+a{
+
+}
+
+a.button{
+
+}
