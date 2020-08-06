@@ -27,7 +27,7 @@ var changeState = function(state) {
 			var randomNumber =Math.round(Math.random()*10);
 
 			console.log('randomNumber:', randomNumber)
-			
+			//Succes//
 			if (randomNumber > 5) {
 				changeState(4);
 			}else{
